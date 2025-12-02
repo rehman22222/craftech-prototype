@@ -6,28 +6,8 @@
   "cleanUrls": true,
   "rewrites": [
     {
-      "source": "/(.*)",
+      "source": "/:path*",
       "destination": "/"
-    }
-  ],
-  "headers": [
-    {
-      "source": "/assets/(.*)",
-      "headers": [
-        {
-          "key": "Cache-Control",
-          "value": "public, max-age=31536000, immutable"
-        }
-      ]
-    },
-    {
-      "source": "/(.*).mp4",
-      "headers": [
-        {
-          "key": "Content-Type",
-          "value": "video/mp4"
-        }
-      ]
     }
   ]
 }
